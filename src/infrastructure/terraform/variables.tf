@@ -57,9 +57,23 @@ variable "infiscal_token" {
    type  = string
 }
 
+
+variable "upstash_token" {
+   description = "Supbase service token"
+   default = "UPSTASH_MUSIC_STREAM"
+   type  = string
+
+}
+
 variable "registered_email" {
    description = "Registered Email"
    type  = string
+
+}
+
+variable "servers_setup" {
+   description = "Servers needed to set up with VM"
+   type  = number
 
 }
 

@@ -11,6 +11,10 @@ terraform {
     upstash = {
       source = "upstash/upstash"
     }
+    multipass = {
+      source = "larstobi/multipass"
+      version = "1.4.2"
+    }
   }
 }
 
@@ -28,13 +32,17 @@ module "infiscal" {
   infiscal_token = var.infiscal_token
 }
  
-module "supbase" {
-  source   = "./modules/supbase"
-}
 
 module "upstash" {
   source   = "./modules/upstash"
   registered_email = var.registered_email
   api_key = module.infiscal.upstash_key
 }
+
+module "multipass" {
+  source   = "./modules/multipass"
+  vm_counts = var.servers_setup
+}
+
+
 
