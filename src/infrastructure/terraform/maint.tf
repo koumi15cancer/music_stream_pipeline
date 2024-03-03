@@ -41,7 +41,14 @@ module "upstash" {
 
 module "multipass" {
   source   = "./modules/multipass"
-  vm_counts = var.servers_setup
+  master_counts = var.master_counts
+  worker_counts = var.worker_counts
+  cpu_masters = var.cpu_masters
+  cpu_workers = var.cpu_workers
+  memory_masters = var.memory_masters
+  memory_workers = var.memory_workers
+  disk_masters = var.disk_masters
+  disk_workers = var.disk_workers
 }
 
 
