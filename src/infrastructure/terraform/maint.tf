@@ -18,14 +18,14 @@ terraform {
   }
 }
 
-/*  provider "google" {
+ provider "google" {
   project = var.project
   region  = var.region
   zone    = var.zone
   // credentials = file(var.credentials)  # Use this if you do not want to set env-var GOOGLE_APPLICATION_CREDENTIALS
 }
 
-*/
+
 
 module "infiscal" {
   source = "./modules/infiscal"

@@ -1,4 +1,4 @@
-/* variable "project" {
+variable "project" {
   description = "Your GCP Project ID"
   type        = string
 }
@@ -50,11 +50,12 @@ variable "bucket" {
   type        = string 
 }
 
- */
+ 
 
 variable "infiscal_token" {
    description = "Infiscal service token"
    type  = string
+    sensitive = true
 }
 
 
@@ -72,7 +73,7 @@ variable "registered_email" {
 }
 
 // Multipass setup
-
+/* 
 variable "master_counts" {
    description = "Registered VM master to create"
    type  = number
@@ -113,5 +114,7 @@ variable "disk_workers" {
    description = "Disk Configuration for workers"
    type  = string
 }
+
+ */
 
 
