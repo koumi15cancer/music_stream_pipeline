@@ -1,0 +1,3 @@
+include:
+  - path: 'spark-standalone-cluster/docker-compose.yml'
+  - path: 'airflow/docker-compose.yml'
