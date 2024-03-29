@@ -1,0 +1,29 @@
+[0m18:08:06.648317 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1102a8cb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1102ab230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1102aae40>]}
+
+
+============================== 18:08:06.651999 | d5e7845c-2f63-4cb5-a8b4-1a24824d1e70 ==============================
+[0m18:08:06.651999 [info ] [MainThread]: Running with dbt=1.7.9
+[0m18:08:06.652430 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/Users/cody/.dbt', 'log_path': 'logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt init', 'send_anonymous_usage_stats': 'True'}
+[0m18:08:25.330302 [debug] [MainThread]: Starter project path: /Users/cody/.pyenv/versions/3.12.1/lib/python3.12/site-packages/dbt/include/starter_project
+[0m18:08:25.342338 [info ] [MainThread]: 
+Your new dbt project "music_stream" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m18:08:25.343052 [info ] [MainThread]: Setting up your profile.
+[0m18:10:32.198973 [info ] [MainThread]: Profile music_stream written to /Users/cody/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m18:10:32.219791 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 145.58878, "process_user_time": 1.157215, "process_kernel_time": 0.181257, "process_mem_max_rss": "126255104", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m18:10:32.220858 [debug] [MainThread]: Command `dbt init` succeeded at 18:10:32.220678 after 145.59 seconds
+[0m18:10:32.221350 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1101da720>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1116e99a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11216f140>]}
+[0m18:10:32.221849 [debug] [MainThread]: Flushing usage events

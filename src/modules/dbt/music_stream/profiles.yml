@@ -1,0 +1,31 @@
+streamify:
+  outputs:
+    dev:
+      dataset: streamify_stg
+      fixed_retries: 1
+      keyfile: >-
+        {% if env_var('PLATFORM', '') == 'darwin' %}
+        {{ env_var('HOME') }}/.google/credentials/google_credentials.json
+        {% else %}/.google/credentials/google_credentials.json{% endif %}
+      location: asia-southeast1
+      method: service-account
+      priority: interactive
+      project: "{{ env_var('GCP_PROJECT_ID') }}"
+      threads: 4
+      timeout_seconds: 300
+      type: bigquery
+    prod:
+      dataset: streamify_prod
+      fixed_retries: 1
+      keyfile: >-
+        {% if env_var('PLATFORM', '') == 'darwin' %}
+        {{ env_var('HOME') }}/.google/credentials/google_credentials.json
+        {% else %}/.google/credentials/google_credentials.json{% endif %}
+      location: asia-southeast1
+      method: service-account
+      priority: interactive
+      project: "{{ env_var('GCP_PROJECT_ID') }}"
+      threads: 4
+      timeout_seconds: 300
+      type: bigquery
+  target: dev
