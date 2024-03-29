@@ -21,5 +21,5 @@ clean-dev:
 down-dev: 
 	$(LOCAL_FOLDER) &&  docker-compose down --volumes --remove-orphans
 
-run-dev: 
-	$(LOCAL_FOLDER) &&  make down-dev && docker-compose up
+run-dev: down-dev
+	$(LOCAL_FOLDER) && docker-compose up
