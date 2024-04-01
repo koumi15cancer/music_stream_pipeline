@@ -1,0 +1,20 @@
+version: '3'
+services:
+  million_events:
+    #image: 'events:1.0'
+    build: .
+    command: >
+      -c "examples/example-config.json" \
+      --nusers 1000000 \
+      --growth-rate 10 \
+      --userid 1 \
+      --kafkaBrokerList broker:9092 \
+      --randomseed 1 \
+      --continuous
+    deploy:
+      mode: replicated
+      replicas: 1
+    depends_on:
+      - broker
+    mem_limit: 5.5g
+    memswap_limit: 7g

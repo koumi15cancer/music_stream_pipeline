@@ -12,7 +12,7 @@ build-dev:
 build-dev-nc: 
 	$(LOCAL_FOLDER) &&  docker-compose build --no-cache
 
-build-dev-progress: 
+build-dev-progress:
 	$(LOCAL_FOLDER) &&  docker-compose build --no-cache --progress=plain
 
 clean-dev: 
@@ -23,3 +23,6 @@ down-dev:
 
 run-dev: down-dev
 	$(LOCAL_FOLDER) && docker-compose up
+
+run-dev-d: down-dev
+	$(LOCAL_FOLDER) && docker-compose up -d

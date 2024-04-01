@@ -19,3 +19,4 @@ data/*
 /docker-compose.generated.yml
 
 *crash.log
+*.log
