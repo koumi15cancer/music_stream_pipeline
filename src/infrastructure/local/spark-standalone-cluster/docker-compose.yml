@@ -64,7 +64,7 @@ services:
     entrypoint: ['./entrypoint.sh', 'worker']
     deploy:
       mode: replicated
-      replicas: 3
+      replicas: 2
     depends_on:
       - spark-master
     env_file:
