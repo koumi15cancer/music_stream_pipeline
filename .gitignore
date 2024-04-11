@@ -26,3 +26,9 @@ data/*
 
 # Environment Variable
 .env
+
+#cache
+.cache
+
+#.vscode
+.vscode/
