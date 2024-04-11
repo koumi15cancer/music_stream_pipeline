@@ -126,7 +126,7 @@ class SpotifyUtils:
         artist_df = self.get_artists_from_playlist(playlist_uri)
 
         # get top tracks for each artist
-        artist_tracks = [self.get_top_tracks_by_artist(x)
+        artist_tracks = [self.get_top_tracks_by_artists(x)
                          for x in artist_df.loc[:, "artist_id"].values]
         tracks_df = pd.concat(artist_tracks)
         tracks_df = artist_df.merge(tracks_df, on="artist_id")
