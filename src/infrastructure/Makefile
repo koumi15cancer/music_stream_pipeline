@@ -6,19 +6,19 @@ start:
 # Development Targets/ local machine
 # -------------------
 
-build-dev: 
+build-dev:
 	$(LOCAL_FOLDER) &&  docker-compose build
 
-build-dev-nc: 
+build-dev-nc:
 	$(LOCAL_FOLDER) &&  docker-compose build --no-cache
 
 build-dev-progress:
 	$(LOCAL_FOLDER) &&  docker-compose build --no-cache --progress=plain
 
-clean-dev: 
+clean-dev:
 	$(LOCAL_FOLDER) &&  docker-compose down --rmi="all" --volumes
 
-down-dev: 
+down-dev:
 	$(LOCAL_FOLDER) &&  docker-compose down --volumes --remove-orphans
 
 run-dev: down-dev
